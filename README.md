@@ -19,6 +19,7 @@ The following **optional** features are implemented:
 
 - [x] List anything else that you can get done to improve the app functionality!
 - Added hover effects on the filter buttons
+- Updated website colors to be more minimalistic
 
 ## Video Walkthrough
 
