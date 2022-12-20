@@ -38,7 +38,7 @@ GIF created with ScreenToGif
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+When I viewed the GitHub Repository, it was initially empty so I looked into a pending pull request and used that code instead. That may be why my repository may be several commits behind. Other than that, I had some challenges with the reduce() function since I rarely use it. However, after experiencing it with this prework, I definitely see some potential uses in the future!
 
 ## License
 
