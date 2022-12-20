@@ -17,7 +17,8 @@ The following **required** functionality is completed:
 
 The following **optional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app functionality!
+- [x] List anything else that you can get done to improve the app functionality!
+- Added hover effects on the filter buttons
 
 ## Video Walkthrough
 
@@ -27,7 +28,7 @@ Here's a walkthrough of implemented features:
 
 <!-- Replace this with whatever GIF tool you used! -->
 
-GIF created with ...
+GIF created with ScreenToGif
 
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS

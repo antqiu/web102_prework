@@ -82,3 +82,21 @@ button {
     margin: 1%;
     border-radius: 7px;
 }
+
+#unfunded-btn:hover {
+    border: 1px solid lightblue;
+    cursor: pointer;
+    color: lightblue;
+}
+
+#funded-btn:hover {
+    border: 1px solid lightblue;
+    cursor: pointer;
+    color: lightblue;
+}
+
+#all-btn:hover {
+    border: 1px solid lightblue;
+    cursor: pointer;
+    color: lightblue;
+}
