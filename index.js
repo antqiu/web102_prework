@@ -217,16 +217,18 @@ secondGameContainer.appendChild(secondGameName);
 let favorites = [];
 
 function favorite() {
-	console.log(this.dataset.name);
+	//console.log(this.dataset.name);
+	this.innerHTML = "Unfavorite";
 	const key = GAMES_JSON.findIndex(
 		(obj) => obj.name === `${this.dataset.name}`
 	);
 	if (favorites.includes(key)) {
-		console.log("already in favorites");
+		//console.log("already in favorites");
 		let tempArray = [];
 		tempArray = favorites.filter((item) => item != key);
 		favorites = tempArray;
 		updateFavorites();
+		this.innerHTML = "Favorite";
 		return;
 	} else {
 		favorites.push(key);
