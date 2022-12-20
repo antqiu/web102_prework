@@ -37,6 +37,11 @@ function addGamesToPage(games) {
 		div.classList.add("game-card");
 		img.classList.add("game-img");
 
+		const button = document.createElement("button");
+		button.innerHTML = "Favorite";
+		button.classList.add("favorite-button");
+		button.dataset.name = games[i].name;
+
 		// set the inner HTML using a template literal to display some info
 		// about each game
 		div.innerHTML = `<p><strong>${games[i].name}</strong></p>`;
@@ -44,10 +49,14 @@ function addGamesToPage(games) {
 		div.innerHTML += `<p>${games[i].description}</p>`;
 		div.innerHTML += "<br>";
 		div.innerHTML += `<p>Backers: ${games[i].backers}</p>`;
+		div.innerHTML += `<p>Pledged: $${games[i].pledged}</p>`;
+		div.innerHTML += `<p>Goal: $${games[i].goal}</p>`;
+		div.appendChild(button);
+
 		//div.innerHTML +=  `"<img src=\'${games[i].img}\'/>"`;
 		// TIP: if your images are not displaying, make sure there is space
 		// between the end of the src attribute and the end of the tag ("/>")
-
+		button.addEventListener("click", favorite);
 		// append the game to the games-container
 		document.getElementById("games-container").appendChild(div);
 	}
@@ -201,3 +210,50 @@ firstGameContainer.appendChild(firstGameName);
 const secondGameName = document.createElement("p");
 secondGameName.innerHTML = secondGame.name;
 secondGameContainer.appendChild(secondGameName);
+
+/************************************************************************************
+ * Optional Challenges: Button to increase funding/increase backer
+ */
+let favorites = [];
+
+function favorite() {
+	console.log(this.dataset.name);
+	const key = GAMES_JSON.findIndex(
+		(obj) => obj.name === `${this.dataset.name}`
+	);
+	if (favorites.includes(key)) {
+		console.log("already in favorites");
+		let tempArray = [];
+		tempArray = favorites.filter((item) => item != key);
+		favorites = tempArray;
+		updateFavorites();
+		return;
+	} else {
+		favorites.push(key);
+	}
+	console.log(key);
+	console.log(favorites);
+	updateFavorites();
+}
+
+function updateFavorites() {
+	deleteChildElements(document.getElementById("favorite"));
+	if (favorites.length === 0) {
+		return;
+	}
+	/*
+	favorites.forEach((game) => {
+		const fav = document.createElement("p");
+		fav.innerHTML = `${GAMES_JSON[game].name} with $${GAMES_JSON[game].pledged} pledged!`;
+		document.getElementById("favorites-container").appendChild(fav);
+	});
+	*/
+	for (let i = 0; i < favorites.length; i++) {
+		const fav = document.createElement("p");
+		fav.classList = "center";
+		fav.innerHTML = `${GAMES_JSON[favorites[i]].name} with $${
+			GAMES_JSON[favorites[i]].pledged
+		} pledged!`;
+		document.getElementById("favorite").appendChild(fav);
+	}
+}

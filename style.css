@@ -106,3 +106,22 @@ button {
 .center {
     text-align: center;
 }
+
+.favorite-button {
+    padding: 3% 10% 3% 10%;
+    margin: 1%;
+    border-radius: 7px;
+    background-color: rgb(255, 191, 108);
+    color: black;
+}
+
+.favorite-button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 15px rgb(255, 191, 108);
+}
+
+.subheading {
+    font-size: 12px;
+    text-align: center;
+    color: grey;
+}
