@@ -161,12 +161,14 @@ const unfundedGames = GAMES_JSON.filter((game) => {
 // create a string that explains the number of unfunded games using the ternary operator
 const string =
 	unfundedGames.length === 1
-		? `A total of $${totalRaised.toLocaleString("en-US")} has been raised for ${
+		? `A total of <strong>$${totalRaised.toLocaleString(
+				"en-US"
+		  )}</strong> has been raised for ${
 				GAMES_JSON.length
 		  } games. Currently, 1 game remains unfunded. We need your help to fund these amazing games!`
-		: `A total of $${totalRaised.toLocaleString("en-US")} has been raised for ${
-				GAMES_JSON.length
-		  } games. Currently, ${
+		: `A total of <strong>$${totalRaised.toLocaleString(
+				"en-US"
+		  )}</strong> has been raised for ${GAMES_JSON.length} games. Currently, ${
 				unfundedGames.length
 		  } games remain unfunded. We need your help to fund these amazing games!`;
 
