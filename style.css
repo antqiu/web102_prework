@@ -84,19 +84,16 @@ button {
 }
 
 #unfunded-btn:hover {
-    border: 1px solid lightblue;
+    border: 3px solid lightblue;
     cursor: pointer;
-    color: lightblue;
 }
 
 #funded-btn:hover {
-    border: 1px solid lightblue;
+    border: 3px solid lightblue;
     cursor: pointer;
-    color: lightblue;
 }
 
 #all-btn:hover {
-    border: 1px solid lightblue;
+    border: 3px solid lightblue;
     cursor: pointer;
-    color: lightblue;
 }
