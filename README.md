@@ -17,10 +17,9 @@ The following **required** functionality is completed:
 
 The following **optional** features are implemented:
 
-- [x] List anything else that you can get done to improve the app functionality!
-- Favorite button and favorite section with add/remove buttons on each game
-- Added hover effects on the filter buttons
-- Updated website colors to be more minimalistic
+- [x] Favorite button and favorite section with add/remove buttons on each game
+- [x] Added hover effects on the filter buttons
+- [x] Updated website colors to be more minimalistic
 
 ## Video Walkthrough
 
